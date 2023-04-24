@@ -16,10 +16,10 @@ sed -i 's/192.168.1.1/192.168.100.1/g' package/base-files/files/bin/config_gener
 mkdir -p files/etc/hotplug.d/block && curl -fsSL https://raw.githubusercontent.com/281677160/openwrt-package/usb/block/10-mount > files/etc/hotplug.d/block/10-mount
 
 # Enable r8125 ASPM
-cp -f $GITHUB_WORKSPACE/010-config.patch package/kernel/r8125/patches/010-config.patch
+#cp -f $GITHUB_WORKSPACE/010-config.patch package/kernel/r8125/patches/010-config.patch
 
 #Apply the patches
-git apply $GITHUB_WORKSPACE/patches/*.patch
+#git apply $GITHUB_WORKSPACE/patches/*.patch
 
 # Update mwan3helper's IP pools
 # wget https://raw.githubusercontent.com/Gzxhwq/geoip/release/geoip-only-cn-private.txt -O feeds/luci/applications/luci-app-mwan3helper/root/etc/mwan3helper/all_cn.txt
