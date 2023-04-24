@@ -19,13 +19,13 @@
 echo 'src-git n2n https://github.com/alecthw/openwrt-n2n' >>feeds.conf.default
 
 #Add external packages
-svn co https://github.com/ophub/luci-app-amlogic/trunk/luci-app-amlogic package/others/luci-app-amlogic
-svn co https://github.com/QiuSimons/openwrt-mos/trunk/v2ray-geodata package/others/v2ray-geodata
+#svn co https://github.com/ophub/luci-app-amlogic/trunk/luci-app-amlogic package/others/luci-app-amlogic
+#svn co https://github.com/QiuSimons/openwrt-mos/trunk/v2ray-geodata package/others/v2ray-geodata
 
-svn co https://github.com/Gzxhwq/openwrt-passwall/branches/sing-box-git/sing-box package/others/sing-box
-sed -i '/iptables-mod-socket/d' ./package/others/sing-box/Makefile
-svn co https://github.com/Gzxhwq/openwrt-passwall/branches/xray-core-git/xray-core package/others/xray-core
+#svn co https://github.com/Gzxhwq/openwrt-passwall/branches/sing-box-git/sing-box package/others/sing-box
+#sed -i '/iptables-mod-socket/d' ./package/others/sing-box/Makefile
+#svn co https://github.com/Gzxhwq/openwrt-passwall/branches/xray-core-git/xray-core package/others/xray-core
 
-svn co https://github.com/xiaorouji/openwrt-passwall/branches/luci/luci-app-passwall package/others/luci-app-passwall
+#svn co https://github.com/xiaorouji/openwrt-passwall/branches/luci/luci-app-passwall package/others/luci-app-passwall
 #svn co https://github.com/Gzxhwq/openwrt-passwall/branches/luci-test/luci-app-passwall package/others/luci-app-passwall
-svn co https://github.com/xiaorouji/openwrt-passwall2/trunk/luci-app-passwall2 package/others/luci-app-passwall2
+#svn co https://github.com/xiaorouji/openwrt-passwall2/trunk/luci-app-passwall2 package/others/luci-app-passwall2
