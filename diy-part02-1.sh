@@ -15,11 +15,15 @@
 sed -i 's/192.168.1.1/192.168.100.1/g' package/base-files/files/bin/config_generate
 mkdir -p files/etc/hotplug.d/block && curl -fsSL https://raw.githubusercontent.com/281677160/openwrt-package/usb/block/10-mount > files/etc/hotplug.d/block/10-mount
 
-rm -rf feeds/luci/applications/luci-app-passwall
-git clone https://github.com/xiaorouji/openwrt-passwall.git -b packages package/passwall_package
-git clone https://github.com/xiaorouji/openwrt-passwall.git -b luci package/passwall
-cp -rf package/passwall_package/* package/passwall
-rm -rf package/passwall_package
+# rm -rf feeds/luci/applications/luci-app-passwall
+# git clone https://github.com/xiaorouji/openwrt-passwall.git -b packages package/passwall_package
+# git clone https://github.com/xiaorouji/openwrt-passwall.git -b luci package/passwall
+# cp -rf package/passwall_package/* package/passwall
+# rm -rf package/passwall_package
+
+pushd package/feeds/small
+rm -rf gn && svn co https://github.com/xiaorouji/openwrt-passwall/branches/packages/gn package/feeds/small/gn
+popd
 
 # Enable r8125 ASPM
 #cp -f $GITHUB_WORKSPACE/010-config.patch package/kernel/r8125/patches/010-config.patch
@@ -44,3 +48,6 @@ rm -rf package/passwall_package
 #bash <( curl -sSL https://build-scripts.immortalwrt.eu.org/convert_translation.sh )
 #bash <( curl -sSL https://build-scripts.immortalwrt.eu.org/create_acl_for_luci.sh ) -a
 #rm -rf ./tmp
+
+./scripts/feeds update -a
+./scripts/feeds install -a
