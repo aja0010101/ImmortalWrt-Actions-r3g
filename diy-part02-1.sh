@@ -21,9 +21,9 @@ mkdir -p files/etc/hotplug.d/block && curl -fsSL https://raw.githubusercontent.c
 # cp -rf package/passwall_package/* package/passwall
 # rm -rf package/passwall_package
 
-pushd package/feeds/small
-rm -rf gn && svn co https://github.com/xiaorouji/openwrt-passwall/branches/packages/gn package/feeds/small/gn
-popd
+# pushd package/feeds/small
+# rm -rf gn && svn co https://github.com/xiaorouji/openwrt-passwall/branches/packages/gn package/feeds/small/gn
+# popd
 
 # Enable r8125 ASPM
 #cp -f $GITHUB_WORKSPACE/010-config.patch package/kernel/r8125/patches/010-config.patch
