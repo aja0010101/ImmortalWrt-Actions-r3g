@@ -20,6 +20,7 @@
 # echo 'src-git PWluci https://github.com/xiaorouji/openwrt-passwall.git;luci' >>feeds.conf.default
 # echo 'src-git smpackage https://github.com/kenzok8/small-package' >>feeds.conf.default
 
+echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
 echo 'src-git small8 https://github.com/kenzok8/small-package' >>feeds.conf.default
 echo 'src-git small https://github.com/kenzok8/small' >>feeds.conf.default
 echo 'src-git n2n https://github.com/alecthw/openwrt-n2n' >>feeds.conf.default
